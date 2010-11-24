@@ -1,0 +1,24 @@
+<h1 class="grid_12">Listing news</h1>
+
+<table class="grid_12">
+  <tr>
+    <th id="content" class="grid_2">Title</th>
+    <th id="content" class="grid_8">Content</th>
+    <th id="content" class="grid_2"></th>
+  </tr>
+
+<% @news.each do |news| %>
+  <tr>
+    <td class="grid_2"><%= news.title %></td>
+    <td class="grid_8"><%= news.content %></td>
+    <td class="grid_2"><%= link_to 'Show', news %>
+    <%= link_to 'Edit', edit_news_path(news) %>
+    <%= link_to 'Destroy', news, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<div class="grid_12">
+<%= link_to 'New News', new_news_path %>
+</div>

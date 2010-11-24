@@ -1,3 +1,11 @@
+<script type="text/javascript">
+  
+  createGridder = function() {
+    document.body.appendChild(
+      document.createElement('script'))
+        .src='/javascripts/960.gridder.js';
+  }
+</script>
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,9 +14,12 @@
   <%= javascript_include_tag :defaults %>
   <%= csrf_meta_tag %>
 </head>
+<!--body  onload="createGridder()"-->
 <body>
 
+<div class="container_12">
 <%= yield %>
+</div>
 
 </body>
 </html>

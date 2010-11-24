@@ -1,0 +1,16 @@
+<p id=”sidebar” class=”grid_2 alpha”>
+<%= notice %></p>
+
+<p id=”content” class=”grid_6″>
+  <b>Title:</b>
+  <%= @news.title %>
+</p>
+<p id=”photos” class=”grid_2″>
+  <b>Content:</b>
+  <%= @news.content %>
+</p>
+
+<div id=”advertisements” class=”grid_2 omega”>
+<%= link_to 'Edit', edit_news_path(@news) %> |
+<%= link_to 'Back', news_index_path %>
+</div>
