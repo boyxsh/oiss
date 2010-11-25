@@ -1,4 +1,6 @@
 Oiss::Application.routes.draw do
+  resources :pictures
+
   resources :news
 
   # The priority is based upon order of creation:
