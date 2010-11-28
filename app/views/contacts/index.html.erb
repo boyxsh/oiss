@@ -1,0 +1,38 @@
+<h1>Listing contacts</h1>
+
+<table class="grid_12">
+  <tr>
+    <th class="grid_1">Active</th>
+    <th class="grid_4">Address</th>
+    <th class="grid_1">Phone</th>
+    <th class="grid_2">Qq</th>
+    <th class="grid_2">Msn</th>
+    <th class="grid_2"></th>
+
+  </tr>
+
+<% @contacts.each do |contact| %>
+  <tr id="my_content" >
+    <% if contact.active == true %>
+    <td class="grid_1"> Used </td>
+    <% else %>
+    <td class="grid_1"> Unused </td>
+    <%end%>
+    <td class="grid_4"><%= contact.address %></td>
+    <td class="grid_1"><%= contact.phone %></td>
+    <td class="grid_2"><%= contact.qq %></td>
+    <td class="grid_2"><%= contact.msn %></td>
+    <td class="grid_2"><%= link_to 'Show', contact %>
+        <%= link_to 'Edit', edit_contact_path(contact) %>
+        <%= link_to 'Destroy', contact, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+
+<div class="grid_12">
+<%= link_to 'New Contact', new_contact_path %> |
+<%= link_to 'Goto admin', admin_index_path %>
+</div>

@@ -1,8 +1,17 @@
 Oiss::Application.routes.draw do
+
+  resources :contacts
+
+  resources :company_introductions
+
   resources :pictures
 
   resources :news
+  get "admin/index"
 
+  #root :to => 'admin#index'
+
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -1,0 +1,33 @@
+<h1>Listing company_introductions</h1>
+
+<table>
+  <tr>
+    <th class="grid_1">Active</th>
+    <th class="grid_9">Content</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @company_introductions.each do |company_introduction| %>
+  <tr>
+
+    <% if company_introduction.active == true %>
+    <td class="grid_1"> Used </td>
+    <% else %>
+    <td class="grid_1"> Unused </td>
+    <%end%>
+    <td class="grid_9"><%= company_introduction.content %></td>
+    <td class="grid_2"><%= link_to 'Show', company_introduction %>
+    <%= link_to 'Edit', edit_company_introduction_path(company_introduction) %>
+    <%= link_to 'Destroy', company_introduction, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<div class="grid_12">
+<%= link_to 'New Company introduction', new_company_introduction_path %> |
+<%= link_to 'Goto admin', admin_index_path %>
+</div>
+
