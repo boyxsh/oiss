@@ -1,0 +1,138 @@
+<style>
+  body{
+    background: #2e2e2e;
+}
+  #header {
+    height:60px;
+    margin:0 auto;
+    position:relative;
+    width:729px;
+  }
+
+  #header_img h1 {
+    background:url("/images/src/header1.jpg");
+    height:100px;
+    text-indent:-20000px;
+    width:960px;
+    margin-top:5px;
+      margin-bottom:5px;
+  }
+  div.nav, div.article, div.nav ul li a, div.figure {
+-moz-border-radius:10px 10px 10px 10px;
+}
+
+div.nav {
+-moz-box-shadow:0 1px 1px #333333;
+<%#*background:url("img/gradient_light.jpg") repeat-x scroll 50% 50% #F8F8F8;%>
+<%#*border:1px solid #FCFCFC;%>
+padding:0 5px;
+position:absolute;
+right:0;
+<%#*top:4em;%>
+}
+div.nav ul li a, div.nav ul li a:visited {
+color:#f8b63c;
+display:block;
+float:left;
+font-size:1.25em;
+font-weight:bold;
+margin:5px 2px;
+padding:7px 10px 4px;
+<%#*text-shadow:0 1px 1px white;%>
+text-transform:uppercase;
+}
+
+a, a:visited {
+color:#0196E3;
+outline:medium none;
+text-decoration:none;
+}
+div.nav ul li {
+display:inline;
+}
+
+div.nav ul li a:hover{
+  background-color:#2e2e2e;
+    <%#*text-decoration:none;%>
+  color:#ffff00;
+}
+
+.video{
+  height: 100px;
+  background: none repeat scroll 0 0 #929292;
+  margin-bottom:10px;
+}
+.news, .introduction{
+  height: 250px;
+  background: none repeat scroll 0 0 #929292;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+.contact, .pictures{
+   height: 200px;
+  background: none repeat scroll 0 0 #929292;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+#footer{
+  background: none repeat scroll 0 0 #929292;
+  margin-bottom:5px;
+}
+</style>
+
+<div id="header_img" class="container_12">
+    <h1 >header image</h1>
+</div>
+  
+<div id="header" class="container_12">
+
+
+
+  <div  class="nav">
+    <ul>
+      <li><%= link_to 'Home' %></li>
+      <li><%= link_to 'Pictures', pictures_path %></li>
+      <li><%= link_to 'News', news_index_path %></li>
+      <li><%= link_to 'Home'%></li>
+      <li><%= link_to '主页'%></li>
+      <li><%= link_to 'Home'%></li>
+      <li><%= link_to 'Home'%></li>
+    </ul>
+
+  </div>
+</div>
+
+
+<div id="content" class="container_12">
+  <div class="video">video</div>
+  <div class="news grid_4">
+    <ul>
+      <% for new in @news%>
+      <li><%= link_to new.title, new %> </li>
+      <% end %>
+    </ul>
+  </div>
+  <div class="introduction grid_8 omega"><%=  @company_introduction.content %></div>
+  <div class="contact grid_6">
+
+    <tr>地址: <%= @contact.address %></tr></br>
+    <tr>电话: <%= @contact.phone %></tr></br>
+      <% for qq in @contact.qq.split(" ") %>
+    <tr>
+	QQ: <%= qq%>
+     <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<%=qq%>&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:<%=qq%>:45" alt="点击这里给我发消息" title="点击这里给我发消息"></a>
+  </tr></br>
+     <% end %>
+    <tr>MSN: <%= @contact.msn %>
+<a href="http://liveto.me/im/70a5fc0058ca9567" title="点击这里给我发送MSN消息!"><img src="http://liveto.me/msn/status.msn?cid=70a5fc0058ca9567&s=3" style="border:0;margin:10px 0;" alt="点击这里给我发送MSN消息!" /></a>
+	</tr>
+
+  </div>
+  <div class="pictures grid_6"> pictures </div>
+</div>
+<div class="clear"></div>
+
+
+<div id="footer" class="container_12">
+  footer
+</div>

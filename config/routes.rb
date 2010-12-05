@@ -1,5 +1,7 @@
 Oiss::Application.routes.draw do
 
+  get "home/index"
+
   resources :contacts
 
   resources :company_introductions
@@ -9,7 +11,6 @@ Oiss::Application.routes.draw do
   resources :news
   get "admin/index"
 
-  #root :to => 'admin#index'
 
   
   # The priority is based upon order of creation:
@@ -61,7 +62,7 @@ Oiss::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+   root :to => "home#index"
 
   # See how all your routes lay out with "rake routes"
 
