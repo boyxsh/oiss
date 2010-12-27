@@ -106,11 +106,13 @@ div.nav ul li a:hover{
 <div id="content" class="container_12">
   <div class="video">video</div>
   <div class="news grid_4">
+    <marquee scrollAmount=2 onmouseover=stop() onmouseout=start() direction=up height=250>
     <ul>
       <% for new in @news%>
       <li><%= link_to new.title, new %> </li>
       <% end %>
     </ul>
+    </marquee>
   </div>
   <div class="introduction grid_8 omega"><%=  @company_introduction.content %></div>
   <div class="contact grid_6">
@@ -124,7 +126,7 @@ div.nav ul li a:hover{
   </tr></br>
      <% end %>
     <tr>MSN: <%= @contact.msn %>
-<a href="http://liveto.me/im/70a5fc0058ca9567" title="点击这里给我发送MSN消息!"><img src="http://liveto.me/msn/status.msn?cid=70a5fc0058ca9567&s=3" style="border:0;margin:10px 0;" alt="点击这里给我发送MSN消息!" /></a>
+<!--a href="http://liveto.me/im/70a5fc0058ca9567" title="点击这里给我发送MSN消息!"><img src="http://liveto.me/msn/status.msn?cid=70a5fc0058ca9567&s=3" style="border:0;margin:10px 0;" alt="点击这里给我发送MSN消息!" /></a-->
 	</tr>
 
   </div>
@@ -135,4 +137,5 @@ div.nav ul li a:hover{
 
 <div id="footer" class="container_12">
   footer
+<%= link_to 'Admin', admin_index_path %> 
 </div>

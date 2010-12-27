@@ -12,5 +12,10 @@
 
 
 
+<% if admin? %>
+<div id=”advertisements” class=”grid_2 omega”>
 <%= link_to 'Edit', edit_picture_path(@picture) %> |
 <%= link_to 'Back', pictures_path %>
+<%= show_logout %>
+</div>
+<% end %>

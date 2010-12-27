@@ -21,5 +21,10 @@
 </p>
 
 
+<% if admin? %>
+<div id=”advertisements” class=”grid_2 omega”>
 <%= link_to 'Edit', edit_contact_path(@contact) %> |
 <%= link_to 'Back', contacts_path %>
+<%= show_logout %>
+</div>
+<% end %>
