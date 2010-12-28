@@ -11,6 +11,7 @@ Oiss::Application.routes.draw do
   resources :news
   get "admin/index"
   get "admin/logout"
+  get "home/pictures"
 
 
   

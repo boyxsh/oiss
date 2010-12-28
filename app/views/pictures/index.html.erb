@@ -1,3 +1,6 @@
+<!--inclue header partial-->
+<%= render :partial => "home/header" %>
+
 <h1>Listing pictures</h1>
 
 <table>
@@ -15,11 +18,12 @@
     <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
     <td><%= link_to 'Destroy', picture, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
+
+<a href="<%=picture.attachment.url(false,false)%>" id="imgFiche" class="nyroModal" title="UCLA" rel="gal"><%=picture.name%></a>
 <% end %>
 </table>
 
 <br />
 <div class="grid_12">
-<%= link_to 'New Picture', new_picture_path %> |
-<%= link_to 'Goto admin', admin_index_path %>
+<%= link_to 'New Picture', new_picture_path %>
 </div>

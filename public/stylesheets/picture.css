@@ -1,0 +1,15 @@
+div.home{
+	height:100%;
+	width:100%;
+}
+
+div.home div.picture{
+	float: left;
+	margin: 0px;
+	padding: 10px;
+}
+
+div.home div.picture img{
+	width:120px;
+	height:120px;
+}
