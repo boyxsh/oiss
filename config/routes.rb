@@ -1,5 +1,7 @@
 Oiss::Application.routes.draw do
 
+  resources :videos
+
   get "home/index"
 
   resources :contacts

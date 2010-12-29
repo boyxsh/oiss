@@ -1,8 +1,16 @@
+<script type="text/javascript">
+    $(function() {
+//$.fn.media.mapFormat('avi','quicktime');
+        // this one liner handles all the examples on this page
+        $('a.media').media();
+    });
+</script>
+
 <!--inclue header partial-->
 <%= render :partial => "header" %>
 
 <div id="content" class="container_12">
-  <div class="video">video</div>
+  <div class="video"><a class="media {width:100, height:960}" href="<%=@video.attachment.url(false,false)%>"></a></div>
   <div class="news grid_4">
     <marquee scrollAmount=2 onmouseover=stop() onmouseout=start() direction=up height=250>
     <ul>

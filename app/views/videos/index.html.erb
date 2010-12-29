@@ -1,0 +1,32 @@
+<script type="text/javascript">
+    $(function() {
+//$.fn.media.mapFormat('avi','quicktime');
+        // this one liner handles all the examples on this page
+        $('a.media').media();
+    });
+</script>
+
+<h1>Listing videos</h1>
+<table>
+  <tr>
+		<th></th>
+    <th>Name</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @videos.each do |video| %>
+  <tr>
+		<td><a class="media {width:480, height:280}" href="<%=video.attachment.url(false,false)%>"><%=video.name%></a></td>
+    <td><%= video.name %></td>
+    <td><%= link_to 'Show', video %></td>
+    <td><%= link_to 'Edit', edit_video_path(video) %></td>
+    <td><%= link_to 'Destroy', video, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Video', new_video_path %>
