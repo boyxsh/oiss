@@ -3,10 +3,11 @@ class HomeController < ApplicationController
     @company_introduction = CompanyIntroduction.find_by_active(1)
     @news = News.all
     @contact = Contact.find_by_active(1)
+    @video = Video.find(:first, :order=>"updated_at desc")
   end
   
   def pictures
-    @pictures = Picture.find(:all)
+    @pictures = Pictures.find(:all)
   end
 
 end

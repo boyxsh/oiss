@@ -17,7 +17,7 @@ class PicturesControllerTest < ActionController::TestCase
   end
 
   test "should create picture" do
-    assert_difference('Picture.count') do
+    assert_difference('Pictures.count') do
       post :create, :picture => @picture.attributes
     end
 
@@ -40,7 +40,7 @@ class PicturesControllerTest < ActionController::TestCase
   end
 
   test "should destroy picture" do
-    assert_difference('Picture.count', -1) do
+    assert_difference('Pictures.count', -1) do
       delete :destroy, :id => @picture.to_param
     end
 
