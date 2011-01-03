@@ -6,6 +6,11 @@
 </p>
 
 <p>
+  <b>Category:</b>
+  <%= @picture.category.name %>
+</p>
+
+<p>
   <b>Attachment:</b>
   <%= image_tag @picture.attachment.url %>
 </p>
@@ -13,7 +18,7 @@
 
 
 <% if admin? %>
-<div id=”advertisements” class=”grid_2 omega”>
+<div id="advertisements" class="grid_2 omega">
 <%= link_to 'Edit', edit_picture_path(@picture) %> |
 <%= link_to 'Back', pictures_path %>
 <%= show_logout %>

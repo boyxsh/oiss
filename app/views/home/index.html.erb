@@ -3,14 +3,27 @@
 //$.fn.media.mapFormat('avi','quicktime');
         // this one liner handles all the examples on this page
         $('a.media').media();
+				$(".carousel").jCarouselLite({
+				    auto: 800,
+				    speed: 1000
+				});
+				// 
+				// $(".widget img").click(function() {
+				//     $(".widget .mid img").attr("src", $(this).attr("src"));
+				// })
+
     });
+
+	 // $(".carousel").jCarouselLite({ btnNext: ".next", btnPrev: ".prev" });
+	
+	
 </script>
 
 <!--inclue header partial-->
 <%= render :partial => "header" %>
-
+<div class="clear"></div>
 <div id="content" class="container_12">
-  <div class="video"><a class="media {width:100, height:960}" href="<%=@video.attachment.url(false,false)%>"></a></div>
+	<div class="introduction">  <%=  @company_introduction.content %></div>
   <div class="news grid_4">
     <marquee scrollAmount=2 onmouseover=stop() onmouseout=start() direction=up height=250>
     <ul>
@@ -20,9 +33,8 @@
     </ul>
     </marquee>
   </div>
-  <div class="introduction grid_8 omega"><%=  @company_introduction.content %></div>
+	<div class="video grid_8"><a class="media {width:480, height:250}" href="<%=@video.attachment.url(false,false)%>"></a></div>
   <div class="contact grid_6">
-
     <tr>地址: <%= @contact.address %></tr></br>
     <tr>电话: <%= @contact.phone %></tr></br>
       <% for qq in @contact.qq.split(" ") %>
@@ -32,16 +44,16 @@
   </tr></br>
      <% end %>
     <tr>MSN: <%= @contact.msn %>
-<!--a href="http://liveto.me/im/70a5fc0058ca9567" title="点击这里给我发送MSN消息!"><img src="http://liveto.me/msn/status.msn?cid=70a5fc0058ca9567&s=3" style="border:0;margin:10px 0;" alt="点击这里给我发送MSN消息!" /></a-->
+<!-- <a href="http://liveto.me/im/70a5fc0058ca9567" title="点击这里给我发送MSN消息!"><img src="http://liveto.me/msn/status.msn?cid=70a5fc0058ca9567&s=3" style="border:0;margin:10px 0;" alt="点击这里给我发送MSN消息!" /></a> -->
 	</tr>
-
   </div>
-  <div class="pictures grid_6"> pictures </div>
+  <div class="pictures grid_6 omega">
+		<div class="carousel"><ul>
+			<% @categories.each do |category| %>
+				<li><a href='categories/<%=category.id%>'><img src="<%=category.category.url(false,false)%>" alt="<%=category.name%>"></a></li>
+			<% end %>
+		</ul></div>
+		<div class="clear"></div>
+  </div>
 </div>
 <div class="clear"></div>
-
-
-<div id="footer" class="container_12">
-  footer
-<%= link_to 'Admin', admin_index_path %> 
-</div>

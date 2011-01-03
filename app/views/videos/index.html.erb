@@ -1,7 +1,5 @@
 <script type="text/javascript">
     $(function() {
-//$.fn.media.mapFormat('avi','quicktime');
-        // this one liner handles all the examples on this page
         $('a.media').media();
     });
 </script>
@@ -15,6 +13,21 @@
     <th></th>
     <th></th>
   </tr>
+<!-- <a class="media {width:450, height:380, type:'swf'}" href="http://player.youku.com/player.php/sid/XMjMzNTM2Mjg0/v.swf">Youtube Video (SWF)</a> 
+<a class="media {width:250, height:250}" href="http://jquery.malsup.com/media/flash/curtain.flv">SWF with FLV</a>  -->
+<!-- <a class="media {width:250, height:250, type:'swf'}" href="http://jquery.malsup.com/media/flash/curtain.flv">FLV File</a>  -->
+
+<!-- <a class="media {width:480, height:280}" href="http://malsup.github.com/video/simpsons.mov">MOV File (video)</a> 
+<a class="media {width:250, height:250}" href="http://jquery.malsup.com/media/flash/curtain.flv">FLV File</a> 
+<a class="media {width:250, height:250}" href="mediaplayer.swf?file=http://jquery.malsup.com/media/flash/curtain.flv">SWF with FLV (mediaplayer.swf?file=curtain.flv)</a> 
+<a class="media {width:250, height:200}" href="http://jquery.malsup.com/media/flash/snail.swf">SWF File</a> 
+<a class="media {width:450, height:380, type:'swf'}" href="http://player.youku.com/player.php/sid/XMjMzNTM2Mjg0/v.swf>Youtube Video (SWF)</a> 
+<a class="media {width:480, height:425}" href="http://malsup.github.com/video/ski.wmv">WMV File</a> 
+<a class="media {width:300, height:300}" href="http://malsup.github.com/video/clear.avi">AVI File</a> 
+<a class="media {width:250, height:150}" href="http://malsup.github.com/video/pulsar.mpg">MPG File</a> 
+<a class="media {width:250, height:180}" href="http://malsup.github.com/video/tube.3g2">3G2 File (cell phone video)</a> 
+<a class="media {width:400, height:250}" href="http://malsup.github.com/video/realvideo.ram">RAM File</a> 
+<a class="media {width:650, height:500, caption: false}" href="flash/line.swf" id="lr">Line Rider!</a> -->
 
 <% @videos.each do |video| %>
   <tr>

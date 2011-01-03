@@ -1,5 +1,5 @@
 <!--inclue header partial-->
-<%= render :partial => "home/header" %>
+<%= render :partial => "admin/header" %>
 
 <h1>Listing pictures</h1>
 
@@ -18,8 +18,6 @@
     <td><%= link_to 'Edit', edit_picture_path(picture) %></td>
     <td><%= link_to 'Destroy', picture, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
-
-<a href="<%=picture.attachment.url(false,false)%>" id="imgFiche" class="nyroModal" title="UCLA" rel="gal"><%=picture.name%></a>
 <% end %>
 </table>
 

@@ -3,7 +3,7 @@ class PicturesController < ApplicationController
   # GET /pictures
   # GET /pictures.xml
   def index
-    @pictures = Pictures.all
+    @pictures = Picture.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,7 +14,7 @@ class PicturesController < ApplicationController
   # GET /pictures/1
   # GET /pictures/1.xml
   def show
-    @picture = Pictures.find(params[:id])
+    @picture = Picture.find(:first, :conditions => {:id => params[:id]}, :include => :category)
 
     respond_to do |format|
       format.html # show.html.erb
@@ -25,7 +25,7 @@ class PicturesController < ApplicationController
   # GET /pictures/new
   # GET /pictures/new.xml
   def new
-    @picture = Pictures.new
+    @picture = Picture.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,13 +35,13 @@ class PicturesController < ApplicationController
 
   # GET /pictures/1/edit
   def edit
-    @picture = Pictures.find(params[:id])
+    @picture = Picture.find(params[:id])
   end
 
   # POST /pictures
   # POST /pictures.xml
   def create
-    @picture = Pictures.new(params[:picture])
+    @picture = Picture.new(params[:picture])
 
     respond_to do |format|
       if @picture.save
@@ -57,7 +57,7 @@ class PicturesController < ApplicationController
   # PUT /pictures/1
   # PUT /pictures/1.xml
   def update
-    @picture = Pictures.find(params[:id])
+    @picture = Picture.find(params[:id])
 
     respond_to do |format|
       if @picture.update_attributes(params[:picture])
@@ -73,7 +73,7 @@ class PicturesController < ApplicationController
   # DELETE /pictures/1
   # DELETE /pictures/1.xml
   def destroy
-    @picture = Pictures.find(params[:id])
+    @picture = Picture.find(params[:id])
     @picture.destroy
 
     respond_to do |format|

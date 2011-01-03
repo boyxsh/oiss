@@ -1,8 +1,8 @@
 Oiss::Application.routes.draw do
 
-  resources :videos
+  resources :categories
 
-  get "home/index"
+  resources :videos
 
   resources :contacts
 
@@ -13,8 +13,8 @@ Oiss::Application.routes.draw do
   resources :news
   get "admin/index"
   get "admin/logout"
+  get "home/index"
   get "home/pictures"
-
 
   
   # The priority is based upon order of creation:

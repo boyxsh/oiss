@@ -18,18 +18,19 @@
   <head>
     <title>Oiss</title>
     <%= stylesheet_link_tag :all %>
-    <!-- <%= javascript_include_tag :defaults %> -->
-	<%= javascript_include_tag 'jquery-1.4.2.min' %>
-	<%= javascript_include_tag 'jquery.nyroModal-1.6.2' %>
-	<%= javascript_include_tag 'application' %>
-	<%= javascript_include_tag 'jquery.media'%>
-	
-    <%= csrf_meta_tag %>
+		<%= csrf_meta_tag %>
+
+		<%= javascript_include_tag 'jquery-1.4.2.min' %>
+		<%= javascript_include_tag 'application' %>
+		<%= javascript_include_tag 'jquery.nyroModal-1.6.2' %>
+		<%= javascript_include_tag 'jquery.media'%>
+		<%= javascript_include_tag 'jquery.metadata.v2'%>
+		<%= javascript_include_tag 'jcarousellite_1.0.1'%>
+		<%= javascript_include_tag 'rails'%>
 
   </head>
   <!--body  onload="createGridder()"-->
   <body>
-
     <div class="container_12">
       <%= yield %>
     </div>

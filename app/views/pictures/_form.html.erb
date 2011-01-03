@@ -16,6 +16,10 @@
     <%= f.text_field :name %>
   </div>
   <div class="field">
+    <%= f.label :category %><br />
+    <%=select("picture", "category_id", Category.all.collect{|c|[c.name, c.id]}) %>
+  </div>
+  <div class="field">
 	<%= f.label 'attachment' %><br />
 	<%= f.file_field :attachment %>
   </div>
