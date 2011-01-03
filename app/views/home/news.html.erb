@@ -1,0 +1,25 @@
+<!--inclue header partial-->
+<%= render :partial => "header" %>
+
+<div id="content" class="container_12">
+  <div class="home_news">
+	<% @news.each do |news| %>
+            <p id=”title” class=”grid_6″>
+              <%= news.title %>
+            </p>
+            <p id=”update” class=”grid_6″>
+            <%= news.updated_at.strftime("%Y-%m-%d %H:%M:%S") %>
+            </p>
+            <p id=”content” class=”grid_2″>
+              <%= news.content %>
+            </p>
+	<% end %>
+  </div>
+	<div class="clear"></div>
+</div>
+<div class="clear"></div>
+
+<div id="footer" class="container_12">
+  footer
+<%= link_to 'Admin', admin_index_path %> 
+</div>

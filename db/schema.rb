@@ -10,7 +10,17 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101229031657) do
+ActiveRecord::Schema.define(:version => 20110103130212) do
+
+  create_table "categories", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "category_file_name"
+    t.string   "category_content_type"
+    t.integer  "category_file_size"
+    t.datetime "category_updated_at"
+  end
 
   create_table "company_introductions", :force => true do |t|
     t.boolean  "active"
@@ -44,6 +54,7 @@ ActiveRecord::Schema.define(:version => 20101229031657) do
     t.string   "attachment_content_type"
     t.integer  "attachment_file_size"
     t.datetime "attachment_updated_at"
+    t.string   "category_id"
   end
 
   create_table "videos", :force => true do |t|

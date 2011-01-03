@@ -81,6 +81,11 @@ div.nav ul li a:hover{
   margin-top:10px;
   margin-bottom:10px;
 }
+
+.home_news{
+  color:#a09e95;
+}
+
 #footer{
   background: none repeat scroll 0 0 #929292;
   margin-bottom:5px;
@@ -99,7 +104,7 @@ div.nav ul li a:hover{
     <ul>
       <li><%= link_to '首页' ,root_path%></li>
       <li><%= link_to '百福简介'%></li>
-      <li><%= link_to '百福新闻', news_index_path %></li>
+      <li><%= link_to '百福新闻', home_news_path%></li>
       <li><%= link_to '百福图片', home_pictures_path %></li>
       <li><%= link_to '百福鉴赏'%></li>
       <li><%= link_to '百福团队'%></li>
