@@ -15,6 +15,7 @@ Oiss::Application.routes.draw do
   get "admin/logout"
   get "home/index"
   get "home/pictures"
+  get "home/news"
 
   
   # The priority is based upon order of creation:

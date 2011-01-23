@@ -12,4 +12,7 @@ class HomeController < ApplicationController
     @pictures = Picture.find(:all)
   end
 
+  def news
+    @news = News.all
+  end
 end
