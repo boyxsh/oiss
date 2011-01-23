@@ -17,7 +17,7 @@
 <html>
   <head>
     <title>Oiss</title>
-    <%= stylesheet_link_tag :all %>
+    <%= stylesheet_link_tag 'home' %>
 		<%= csrf_meta_tag %>
 
 		<%= javascript_include_tag 'jquery-1.4.2.min' %>
@@ -26,12 +26,13 @@
 		<%= javascript_include_tag 'jquery.media'%>
 		<%= javascript_include_tag 'jquery.metadata.v2'%>
 		<%= javascript_include_tag 'jcarousellite_1.0.1'%>
+		<%= javascript_include_tag 'jquery.carousel.min'%>
 		<%= javascript_include_tag 'rails'%>
 
   </head>
   <!--body  onload="createGridder()"-->
   <body>
-    <div class="container_12">
+    <div class="container">
       <%= yield %>
     </div>
 

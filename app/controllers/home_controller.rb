@@ -1,6 +1,7 @@
 class HomeController < ApplicationController
   def index
-    @company_introduction = CompanyIntroduction.find_by_active(1)
+    #@company_introduction = CompanyIntroduction.find_by_active(1)
+    @picture = Picture.find(:first, :order => "created_at desc")
     @news = News.all
     @contact = Contact.find_by_active(1)
     @video = Video.find(:first, :order=>"updated_at asc")
