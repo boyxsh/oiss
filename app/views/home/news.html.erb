@@ -2,20 +2,22 @@
 <%= render :partial => "header" %>
 
 <div id="content" class="container_12">
-  <div class="home_news">
-	<% @news.each do |news| %>
+  <div class="home_news grid_9">
             <p id=”title” class=”grid_6″>
-              <%= news.title %>
+              <%= @show_news.title %>
             </p>
             <p id=”update” class=”grid_6″>
-            <%= news.updated_at.strftime("%Y-%m-%d %H:%M:%S") %>
+            <%= @show_news.updated_at.strftime("%Y-%m-%d %H:%M:%S") %>
             </p>
             <p id=”content” class=”grid_2″>
-              <%= news.content %>
+              <%= @show_news.content %>
             </p>
-	<% end %>
   </div>
-	<div class="clear"></div>
+  <div class="news_lists grid_3">
+	<% @news.each do |news| %>
+          <li> <%= link_to news.title, home_news_show_path(news) %>
+	<% end %>
+    </div>
 </div>
 <div class="clear"></div>
 

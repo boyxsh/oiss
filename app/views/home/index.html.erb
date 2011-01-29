@@ -18,17 +18,17 @@
 	
 	
 </script>
-
 <!--inclue header partial-->
 <%= render :partial => "header" %>
 <div class="clear"></div>
 <div id="content" class="container_12">
+
 	<div class="introduction">  <%=  @company_introduction.content %></div>
   <div class="news grid_4">
     <marquee scrollAmount=2 onmouseover=stop() onmouseout=start() direction=up height=250>
     <ul>
       <% for new in @news%>
-      <li><%= link_to new.title, new %> </li>
+      <li><%= link_to new.title, home_news_show_url(new) %> </li>
       <% end %>
     </ul>
     </marquee>
@@ -57,3 +57,6 @@
   </div>
 </div>
 <div class="clear"></div>
+<div>
+  <div id="FloatMenuArea">sdfsdf<div>
+</div>

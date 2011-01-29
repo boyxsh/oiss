@@ -1,10 +1,10 @@
-<h1 class="grid_12">Listing news</h1>
+<h1 >Listing news</h1>
 
 <table class="grid_12">
   <tr>
-    <th id="content" class="grid_1 alpha">Title</th>
-    <th id="content" class="grid_8">Content</th>
-    <th id="content" class="grid_2"></th>
+    <th  class="grid_1 alpha">Title</th>
+    <th  class="grid_8">Content</th>
+    <th  class="grid_2"></th>
   </tr>
 
 <% @news.each do |news| %>
@@ -17,9 +17,10 @@
   </tr>
 <% end %>
 </table>
-
 <br />
+<% if admin? %>
 <div class="grid_12">
 <%= link_to 'New News', new_news_path %> |
-<%= link_to 'Goto admin', admin_index_path %>
+<%= render :partial => "admin/goto_admin" %>
 </div>
+<% end %>

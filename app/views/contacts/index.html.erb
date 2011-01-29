@@ -3,7 +3,7 @@
 <table class="grid_12">
   <tr>
     <th class="grid_1">Active</th>
-    <th class="grid_4">Address</th>
+    <th class="grid_3">Address</th>
     <th class="grid_1">Phone</th>
     <th class="grid_2">Qq</th>
     <th class="grid_2">Msn</th>
@@ -18,7 +18,7 @@
     <% else %>
     <td class="grid_1"> Unused </td>
     <%end%>
-    <td class="grid_4"><%= contact.address %></td>
+    <td class="grid_3"><%= contact.address %></td>
     <td class="grid_1"><%= contact.phone %></td>
     <td class="grid_2"><%= contact.qq %></td>
     <td class="grid_2"><%= contact.msn %></td>
@@ -32,7 +32,9 @@
 <br />
 
 
+<% if admin? %>
 <div class="grid_12">
 <%= link_to 'New Contact', new_contact_path %> |
-<%= link_to 'Goto admin', admin_index_path %>
+<%= render :partial => "admin/goto_admin" %>
 </div>
+<% end %>

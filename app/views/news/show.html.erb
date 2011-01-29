@@ -14,6 +14,6 @@
 <div id=”advertisements” class=”grid_2 omega”>
 <%= link_to 'Edit', edit_news_path(@news) %> |
 <%= link_to 'Back', news_index_path %> |
-<%= show_logout %>
+<%= render :partial => "admin/goto_admin" %>
 </div>
 <% end %>
