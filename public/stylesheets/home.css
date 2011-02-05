@@ -1,0 +1,138 @@
+@charset "UTF-8";
+body {
+    font-family:Helvetica, "Lucida Grande", Verdana, Geneva, sans-serif;
+    font-size:small;
+    background:url(../images/bgimg.jpg);
+    margin:0px;
+		background: #000;
+    -webkit-text-size-adjust:none;
+}
+.container {
+    margin:0px auto;
+    width:980px;
+}
+
+#header {
+  height:50px;
+  margin:0 auto;
+  position:relative;
+  width:100%;
+  top: 60px;
+  left:0px;
+}
+#header .nav ul{
+	width:100%;
+	white-space:nowrap;
+}
+#header .nav ul li {
+	display:inline;
+}
+#header .nav ul li a, #header.nav ul li a:visited {
+color:#FFF;
+display:block;
+float:left;
+font-size:1.57em;
+font-weight:bold;
+margin:5px 2px;
+padding:7px 10px 4px;
+<%#*text-shadow:0 1px 1px white;%>
+text-transform:uppercase;
+display:inline;
+}
+#header .nav ul li a:hover{
+  background-color:#2e2e2e;
+  <%#*text-decoration:none;%>
+  color:#ffff00;
+}
+
+a, a:visited {
+color:#0196E3;
+outline:medium none;
+text-decoration:none;
+}
+.logo {
+  background:url("/images/src/header.jpg");
+  height:100px;
+  width:940px;
+  margin:5px 0px 5px 10px;
+  position: relative;
+  top:0px;
+  left:0px;
+}
+.topPic{
+	width:940px;
+	margin:0px 10px 0px 10px;
+	position: relative;
+	height:405px;
+	padding:10px;
+	background:none repeat scroll 0 0 #5f5f5f;
+	overflow:hidden;
+}
+.topPic ul, .pictures ul{
+	list-style:none outside none;
+	margin:0;
+	padding:0;
+}
+.topPic ul li, .pictures ul li{
+	display:inline;
+	float:left;
+	list-style:none outside none;
+	margin:0 2px 0 0;
+}
+.topPic .carousel-control, .pictures .carousel-control{
+    border: 0 none;
+    cursor: pointer;
+    display: inline-block;
+    height: 40px;
+    line-height: 999px;
+    overflow: hidden;
+    text-indent: -9999px;
+    vertical-align: middle;
+    width: 40px;
+		display:none;
+}
+.movie{
+	width:360;
+	height:360;
+	float:left;
+	margin:0;
+	padding:10px;
+}
+.right_box{
+	float:left;
+	margin-top:10px;
+	width:590px;
+	height:360px;
+}
+.right_box .news, .right_box .pictures{
+	position:relative;
+	margin:0px;
+	padding:10px;
+	height:155px;
+	background:none repeat scroll 0 0 #5F5F5F;
+}
+.right_box .news{
+	margin-bottom:10px;
+}
+
+.contact{
+	-moz-box-shadow: 0 2px 5px #CDCDCD;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #DDDDDD;
+    color: #666666;
+    font-size: 90%;
+    height: 15px;
+    line-height: 15px;
+    margin: 10px;
+    padding: 10px 13px 10px 10px;
+    text-align: center;
+    width: 934px;
+}
+.contact a:link{
+	color: #666666;
+	text-decoration: none;
+}
+
+.clear{
+	clear:both;
+}

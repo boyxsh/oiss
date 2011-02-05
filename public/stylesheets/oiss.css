@@ -102,13 +102,3 @@ hr{
   height: 1px;
   margin: 8px 0;
 }
-#FloatMenuArea {
-background: url("/images/src/bgimage.png") repeat-x scroll left top transparent;
-bottom: 100px;
-left: 100px;
-padding-bottom: 15px;
-padding-top: 19px;
-position: fixed;
-width: 100%;
-z-index: -9001;
-}

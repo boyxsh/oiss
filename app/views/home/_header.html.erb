@@ -1,28 +1,16 @@
-<style>
-body{
-    background: #2e2e2e;
-}
-</style>
-
-<div id="header_img" class="container_12">
-    <h1 >header image</h1>
-</div>
-  
-<div id="header" class="container_12">
-
-
-
+<div id="header_logo" class="logo">
+<div id="header" class="header">
   <div  class="nav">
     <ul>
-      <li><%= link_to '首页' ,root_path%></li>
-      <li><%= link_to '百福简介'%></li>
-      <li><%= link_to '百福新闻', home_news_path%></li>
-      <li><%= link_to '百福图片', home_pictures_path %></li>
-      <li><%= link_to '百福鉴赏'%></li>
-      <li><%= link_to '百福团队'%></li>
-      <li><%= link_to '百福报价'%></li>
-			<li><%= link_to '联系方式'%></li>
+      <li><%= link_to '网站首页' ,root_path%></li>
+      <li><%= link_to '服务报价'%></li>
+      <li><%= link_to '主题婚礼', news_index_path %></li>
+      <li><%= link_to '现场图片', home_pictures_path %></li>
+      <li><%= link_to '宣传视频'%></li>
+      <li><%= link_to '专业团队'%></li>
+      <li><%= link_to '关于我们'%></li>
 			<li><%= link_to '管理员', admin_index_path%></li>
     </ul>
   </div>
+</div>
 </div>
