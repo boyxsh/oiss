@@ -12,10 +12,6 @@
 						visible: 1
 				});
     });
-		$(function(){
-		  // $("div.topPic").carousel({ autoSlide: true, autoSlideInterval: 3000, delayAutoSlide: 2000});
-			// $("div.pictures").carousel({ dispItems: 3,autoSlide: true, autoSlideInterval: 3000, delayAutoSlide: 2000});
-		});
 </script>
 <%= render :partial => "header" %>
 <div class="clear"></div>
@@ -23,10 +19,9 @@
 	<div class="topPic">
 		<div class='pic'>
 		<ul>
-			<li><img height="400px" width="940px" src="/images/src/header.jpg" /></li>
-			<li><img height="400px" width="940px" src="<%=  @picture.attachment.url(false,false) %>" /></li>			
-			<li><img height="400px" width="940px" src="/images/src/header.jpg" /></li>
-			<li><img height="400px" width="940px" src="<%=  @picture.attachment.url(false,false) %>" /></li>
+			<% @pictures.each do |picture|%>
+				<li><img height="400px" width="940px" src="<%=picture.attachment.url(false,false) %>"/></li>	
+			<% end%>
 		</ul>
 		</div>
 	</div>
@@ -49,7 +44,7 @@
 			<div class="carousel">
 				<ul>
 				<% @categories.each do |category| %>
-					<li><a href='home/pictures'><img height="150px" width="185px" src="<%=category.category.url(false,false)%>" alt="<%=category.name%>"></a></li>
+					<li><a href='/home/pictures/<%=category.id%>'><img height="150px" width="185px" src="<%=category.category.url(false,false)%>" alt="<%=category.name%>"></a></li>
 				<% end %>
 				</ul>
 			</div>

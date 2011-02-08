@@ -1,0 +1,64 @@
+<script type="text/javascript">
+    $(function() {
+//$.fn.media.mapFormat('avi','quicktime');
+        // this one liner handles all the examples on this page
+        $('a.media').media();
+				$(".carousel").jCarouselLite({
+				    auto: 800,
+				    speed: 1000
+				});
+				// 
+				// $(".widget img").click(function() {
+				//     $(".widget .mid img").attr("src", $(this).attr("src"));
+				// })
+
+    });
+
+	 // $(".carousel").jCarouselLite({ btnNext: ".next", btnPrev: ".prev" });
+	
+	
+</script>
+
+<!--inclue header partial-->
+<%= render :partial => "header" %>
+<div class="clear"></div>
+<div id="content" class="container_12">
+	<div class="introduction">  <img src="<%=  @picture.attachment.url(false,false) %>" height="400px" width="800px" alt="<%@picture.name%>"></div>
+	<div class="video grid_8">
+		<a class="media {width:480, height:260}" href="<%=@video.attachment.url(false,false)%>"></a>
+	</div>
+  <div class="news grid_4" style="height:110">
+    <marquee scrollAmount=2 onmouseover=stop() onmouseout=start() direction=up height=250>
+    <ul>
+      <% for new in @news%>
+      <li><%= link_to new.title, new %> </li>
+      <% end %>
+    </ul>
+    </marquee>
+  </div>
+  <div class="pictures grid_6 omega" style="height:110">
+		<div class="carousel" style="width:100%;"><ul>
+			<% @categories.each do |category| %>
+				<!-- <li><a href='categories/<%=category.id%>'><img src="<%=category.category.url(false,false)%>" alt="<%=category.name%>"></a></li> -->
+				<li><a href='home/pictures'><img src="<%=category.category.url(false,false)%>" alt="<%=category.name%>"></a></li>
+			<% end %>
+		</ul></div>
+		<div class="clear"></div>
+  </div>
+	  <div class="contact grid_6">
+		<div class="address">
+	    <tr>地址: <%= @contact.address %></tr></br>
+	    <tr>电话: <%= @contact.phone %></tr></br>
+	      <% for qq in @contact.qq.split(" ") %>
+	    <tr>
+		QQ: <%= qq%>
+	     <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<%=qq%>&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:<%=qq%>:45" alt="点击这里给我发消息" title="点击这里给我发消息"></a>
+	  </tr></br>
+	     <% end %>
+	    <tr>MSN: <%= @contact.msn %>
+	<!-- <a href="http://liveto.me/im/70a5fc0058ca9567" title="点击这里给我发送MSN消息!"><img src="http://liveto.me/msn/status.msn?cid=70a5fc0058ca9567&s=3" style="border:0;margin:10px 0;" alt="点击这里给我发送MSN消息!" /></a> -->
+		</tr>
+		</div>
+	  </div>
+</div>
+<div class="clear"></div>

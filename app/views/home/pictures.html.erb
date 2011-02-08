@@ -1,7 +1,50 @@
 <!--inclue header partial-->
 <%= render :partial => "header" %>
+<script>
+$(function() {
+	$(".widget .jCarouselLite").jCarouselLite({
+	    btnNext: ".widget .next",
+	    btnPrev: ".widget .prev",
+	    speed: 800,
+	    easing: "backout",
+			scroll: 3,
+			visible: 4
+	});
 
-<div id="content" class="container_12">
+	$(".widget .jCarouselLite img").click(function() {
+	    $(".widget .mid img").attr("src", $(this).attr("src"));
+	});
+	
+	$(".widget .jCarouselLite img").first().click();
+});
+</script>
+<div class="category">
+	<ul>
+		<% @categories.each do |cat|%>
+			<li><a href="/home/pictures/<%=cat.id%>"><%=image_tag cat.category.url, {:width => '50px', :height => '50px'}%><br/><%=cat.name%></a></li>
+		<% end %>
+	</ul>
+</div>
+<div class="clear"></div>
+<%unless @pictures.blank?%>
+<div class="carousel widget">
+	<div class="mid">
+		<img width=960 height=400/>
+	</div>
+	<div class="clear"></div>
+<a class="prev"><span class="bg_prev">previous</span></a>
+<div class="jCarouselLite">
+	<ul>
+		<% @pictures.each do |pic|%>
+			<li><%=image_tag pic.attachment.url(false, false), {:width => '60px', :height => '60px'}%></li>
+		<% end %>
+	</ul>
+</div>
+<a class="next"><span class="bg_next">next</span></a>
+<div class="clear"></div>
+</div>
+<%end%>
+<!-- <div id="content" class="container_12">
   <div class="home">
 	<% @pictures.each do |picture| %>
 		<div class='picture'><a href="<%=picture.attachment.url(false,false)%>" class="nyroModal" title="<%=picture.name%>" rel="gal"><%=image_tag picture.attachment.url%></a>
@@ -15,4 +58,4 @@
 <div id="footer" class="container_12">
   footer
 <%= link_to 'Admin', admin_index_path %> 
-</div>
+</div> -->

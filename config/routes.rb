@@ -11,12 +11,13 @@ Oiss::Application.routes.draw do
   resources :pictures
 
   resources :news
+  
   get "admin/index"
   get "admin/logout"
   get "home/index"
-  get "home/pictures"
   get "home/news"
-
+  
+  match "home/pictures/:id" => "home#pictures"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

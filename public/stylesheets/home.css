@@ -14,7 +14,7 @@ body {
 
 #header {
   height:50px;
-  margin:0 auto;
+  margin:0 auto 0 150px;
   position:relative;
   width:100%;
   top: 60px;
@@ -68,12 +68,17 @@ text-decoration:none;
 	background:none repeat scroll 0 0 #5f5f5f;
 	overflow:hidden;
 }
-.topPic ul, .pictures ul{
+.category{
+/*	width:	;*/
+	position:relative;
+	margin:0px 10px;
+}
+.topPic ul, .pictures ul, .category ul{
 	list-style:none outside none;
 	margin:0;
 	padding:0;
 }
-.topPic ul li, .pictures ul li{
+.topPic ul li, .pictures ul li, .category ul li{
 	display:inline;
 	float:left;
 	list-style:none outside none;
@@ -133,6 +138,48 @@ text-decoration:none;
 	text-decoration: none;
 }
 
+div .jCarouselLite{
+	margin:0 auto;
+	width:150px;
+	overflow:hidden;
+	float:left;
+}
+
+div .mid{
+	margin:10px 0px 10px;
+	border:1px solid gray;
+}
+
+.carousel {
+    margin: 10px 10px 20px 10px;
+    padding: 10px 0 0;
+    position: relative;
+}
+
+.carousel a {
+    float: left;
+		cursor:pointer;
+}
+.carousel a span{
+	background: url("/images/src/direction.jpg") no-repeat scroll left top transparent;
+ 	display: block;
+  font-size: 0;
+  height: 45px;
+  line-height: 100px;
+  overflow: hidden;
+  width: 30px;
+	margin-top:10px;
+}
+
+.carousel .bg_prev {
+	background-position: -537px -160px;
+	margin-right:10px;
+	margin-left:300px;
+}
+.carousel .bg_next {
+  background-position: -390px -160px;
+	margin-left:10px;
+}
 .clear{
 	clear:both;
 }

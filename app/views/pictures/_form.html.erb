@@ -23,6 +23,10 @@
 	<%= f.label 'attachment' %><br />
 	<%= f.file_field :attachment %>
   </div>
+  <div class="field">
+	<%= f.label 'show_in_top' %><br />
+	<%= check_box_tag "picture[show_in_top]"%>
+  </div>
   <div class="actions">
     <%= f.submit %>
   </div>
