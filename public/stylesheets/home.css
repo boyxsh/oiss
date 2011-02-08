@@ -145,22 +145,25 @@ div .jCarouselLite{
 	float:left;
 }
 
+div .jCarouselLite ul li{
+	cursor:pointer;
+}
+
 div .mid{
 	margin:10px 0px 10px;
 	border:1px solid gray;
 }
 
-.carousel {
-    margin: 10px 10px 20px 10px;
-    padding: 10px 0 0;
-    position: relative;
+.widget {
+  margin: 10px 10px 20px 10px;
+  padding: 10px 0 0;
+	position: relative;
 }
-
-.carousel a {
+.widget a {
     float: left;
 		cursor:pointer;
 }
-.carousel a span{
+.widget a span{
 	background: url("/images/src/direction.jpg") no-repeat scroll left top transparent;
  	display: block;
   font-size: 0;
@@ -171,12 +174,12 @@ div .mid{
 	margin-top:10px;
 }
 
-.carousel .bg_prev {
+.widget .bg_prev {
 	background-position: -537px -160px;
 	margin-right:10px;
 	margin-left:300px;
 }
-.carousel .bg_next {
+.widget .bg_next {
   background-position: -390px -160px;
 	margin-left:10px;
 }
