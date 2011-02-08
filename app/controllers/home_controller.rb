@@ -18,5 +18,6 @@ class HomeController < ApplicationController
 
   def news
     @news = News.all
+    @show_news = params[:id].blank? ? @news.first :  News.find_by_id(params[:id])
   end
 end

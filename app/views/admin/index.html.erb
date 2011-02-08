@@ -31,8 +31,16 @@
   <p>新闻</p>
 </div>
 <div class="admin_index">
+  <%= link_to image_tag("src/monitor.png",  :alt =>"pictures edit"), categories_path  %>
+  <p>图片类别</p>
+</div>
+<div class="admin_index">
   <%= link_to image_tag("src/monitor.png",  :alt =>"pictures edit"), pictures_path  %>
   <p>图片</p>
+</div>
+<div class="admin_index">
+  <%= link_to image_tag("src/monitor.png",  :alt =>"pictures edit"), videos_path  %>
+  <p>视频</p>
 </div>
 <div class="admin_index">
   <%= link_to image_tag("src/introduction.png",  :alt =>'company introductions edit'), company_introductions_path %>

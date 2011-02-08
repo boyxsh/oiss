@@ -11,13 +11,16 @@
 <% @categories.each do |category| %>
   <tr>
     <td><%= category.name %></td>
-    <td><%= link_to 'Show', category %></td>
-    <td><%= link_to 'Edit', edit_category_path(category) %></td>
-    <td><%= link_to 'Destroy', category, :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'Show', category %>
+    <%= link_to 'Edit', edit_category_path(category) %>
+    <%= link_to 'Destroy', category, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>
 
 <br />
 
-<%= link_to 'New Category', new_category_path %>
+<% if admin? %>
+<%= link_to 'New Category', new_category_path %> |
+<%= render :partial => "admin/goto_admin" %>
+<% end %>

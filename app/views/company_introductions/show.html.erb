@@ -11,7 +11,7 @@
 <% if admin? %>
 <div id=”advertisements” class=”grid_2 omega”>
 <%= link_to 'Edit', edit_company_introduction_path(@company_introduction) %> |
-<%= link_to 'Back', company_introductions_path %>
-<%= show_logout %>
+<%= link_to 'Back', company_introductions_path %> |
+<%= render :partial => "admin/goto_admin" %>
 </div>
 <% end %>
