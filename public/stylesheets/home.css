@@ -109,10 +109,19 @@ text-decoration:none;
 	width:590px;
 	height:360px;
 }
-.right_box .news, .right_box .pictures{
+.right_box ul{
+	list-style-type:none;
+	margin-left:-20px;
+}
+.right_box ul li{
+	margin-top:2px;
+	margin-bottom:2px;
+}
+
+.right_box .pictures{
 	position:relative;
-	margin:0px;
-	padding:10px;
+	margin-top:10px;
+	padding:12.5px;
 	height:155px;
 	background:none repeat scroll 0 0 #5F5F5F;
 }
