@@ -10,8 +10,10 @@ class HomeController < ApplicationController
   def pictures
     if params[:id].blank?
       @pictures = nil
+       @category_id = nil
     else
       @pictures = Category.find_by_id(params[:id]).pictures
+      @category_id = params[:id]
     end
     @categories = Category.find(:all)
   end

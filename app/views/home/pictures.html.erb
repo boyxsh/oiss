@@ -16,14 +16,20 @@ $(function() {
 	});
 	
 	$(".widget .jCarouselLite img").first().click();
+	
+	$("#_people").change(function(){
+		window.location.href = "/home/pictures/"+$(this).val();
+	});
 });
 </script>
 <div class="category">
-	<ul>
+	<span style="color: white;">主题：</span>
+		<%=select(nil, "people", @categories.collect {|p| [ p.name, p.id ] }, { :selected => @category_id }) unless @categories.blank?%>
+	<!-- <ul>
 		<% @categories.each do |cat|%>
 			<li><a href="/home/pictures/<%=cat.id%>"><%=image_tag cat.category.url, {:width => '50px', :height => '50px'}%><br/><%=cat.name%></a></li>
 		<% end %>
-	</ul>
+	</ul> -->
 </div>
 <div class="clear"></div>
 <%unless @pictures.blank?%>
