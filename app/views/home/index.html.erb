@@ -59,7 +59,7 @@
 			<marquee scrollAmount=2 onmouseover=stop() onmouseout=start() direction=up height=160>
 	    <ul>
 	      <% for new in @news%>
-	      <li><%= link_to new.title, new %> </li>
+	      <li><a href='/home/news/<%=new.id%>'><span><%=new.title%></span> -- <span><%=new.content.slice!(0..30)%></span></a></li>
 	      <% end %>
 	    </ul>
 	    </marquee>
@@ -71,7 +71,7 @@
 			<div class="carousel">
 				<ul>
 				<% @categories.each do |category| %>
-					<li><a href='/home/pictures/<%=category.id%>'><img height="175px" width="185px" src="<%=category.category.url(false,false)%>" alt="<%=category.name%>"></a></li>
+					<li><a href='/home/pictures/<%=category.id%>'><img height="175px" width="187px" src="<%=category.category.url(false,false)%>" alt="<%=category.name%>"></a></li>
 				<% end %>
 				</ul>
 			</div>
