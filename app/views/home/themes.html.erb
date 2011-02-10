@@ -1,0 +1,36 @@
+<!--inclue header partial-->
+<%= render :partial => "header" %>
+
+<div id="content" class="container_12">
+		<div class="themes">
+                  <div class="themes_context" style= <%="background:url(#{@categories.category.url})no-repeat" unless @id %>> 
+                    <div class="white-bgc">
+                        <div class="grid_1"> <%= simple_format "" %> </div>
+                        <div class="grid_10">
+                          <div class="temes_title"><%= @title%></div>
+
+                       <%=  simple_format @body%> 
+                     </div>
+                    </div>
+                  </div>
+                  <% if @id %>
+		<div class="pictures">
+				<% @categories.each do |category| %>
+				<ul>
+			<div class="carousel grid_3">
+                          <div class="carousel_name"><%=category.name%></div>
+                          <div><a href='/home/themes/<%=category.id%>'><img width=100% src="<%=category.category.url(false,false)%>" alt="<%=category.name%>"></a></div>
+			</div>
+				</ul>
+				<% end %>
+		</div>
+              <% end %>
+                </div>
+</div>
+
+<div class="clear"></div>
+
+<div id="footer" class="container_12">
+  footer
+<%= link_to 'Admin', admin_index_path %> 
+</div>

@@ -1,0 +1,26 @@
+<h1 >Listing Description</h1>
+
+<table class="grid_12">
+  <tr>
+    <th  class="grid_1 alpha">Title</th>
+    <th  class="grid_8">Content</th>
+    <th  class="grid_2"></th>
+  </tr>
+
+<% @description.each do |d| %>
+  <tr>
+    <td class="grid_1"><%= d.title %></td>
+    <td class="grid_8"><%= simple_format d.body%></td>
+    <td class="grid_2"><%= link_to 'Show', d%>
+    <%= link_to 'Edit', edit_description_path(d) %>
+    <%= link_to 'Destroy', d, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+<% if admin? %>
+<div class="grid_12">
+<%= link_to 'New Description', new_description_path %> |
+<%= render :partial => "admin/goto_admin" %>
+</div>
+<% end %>
