@@ -52,7 +52,8 @@ display:inline;
 }
 
 a, a:visited {
-color:#000;
+/*color:#000;*/
+color:#0196E3;
 /*0196E3;*/
 outline:medium none;
 text-decoration:none;

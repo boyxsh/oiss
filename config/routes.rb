@@ -18,6 +18,7 @@ Oiss::Application.routes.draw do
   get "home/index"
   get "home/news"
   get "home/themes"
+  get "home/pictures"
 
   match "home/pictures/:id" => "home#pictures"
   
