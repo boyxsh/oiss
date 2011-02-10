@@ -1,6 +1,6 @@
 Oiss::Application.routes.draw do
 
-  resources :categories
+  resources :categories 
 
   resources :videos
 
@@ -11,12 +11,15 @@ Oiss::Application.routes.draw do
   resources :pictures
 
   resources :news
-  
+
+  resources :descriptions
   get "admin/index"
   get "admin/logout"
   get "home/index"
   get "home/news"
-  
+  get "home/themes"
+  get "home/pictures"
+
   match "home/pictures/:id" => "home#pictures"
   
   # The priority is based upon order of creation:
@@ -30,6 +33,7 @@ Oiss::Application.routes.draw do
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
      match 'home/news/:id' => 'home#news', :as=> :home_news_show
+     match 'home/themes/:id' => 'home#themes', :as=> :home_themes_show
 
   # Sample resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
@@ -51,6 +55,7 @@ Oiss::Application.routes.draw do
   #     resources :comments, :sales
   #     resource :seller
   #   end
+
 
   # Sample resource route with more complex sub-resources
   #   resources :products do

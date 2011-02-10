@@ -1,0 +1,19 @@
+<p id=”sidebar” class=”grid_2 alpha”>
+<%= notice %></p>
+
+<p id=”content” class=”grid_6″>
+  <b>Title:</b>
+  <%= @description.title %>
+</p>
+<p id=”photos” class=”grid_2″>
+  <b>Content:</b>
+  <%= simple_format @description.body %>
+</p>
+
+<% if admin? %>
+<div id=”advertisements” class=”grid_2 omega”>
+<%= link_to 'Edit', edit_description_path(@description) %> |
+<%= link_to 'Back', descriptions_path %> |
+<%= render :partial => "admin/goto_admin" %>
+</div>
+<% end %>

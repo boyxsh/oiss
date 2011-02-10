@@ -15,6 +15,12 @@
     <%= f.label :name %><br />
     <%= f.text_field :name %>
   </div>
+    <%= f.fields_for :description do  |d_form| %>
+        <div class="field">
+          <%= d_form.label :body%><br />
+          <%= d_form.text_area:body%>
+        </div>
+    <% end %>
   <div class="field">
 	<%= f.label 'category' %><br />
 	<%= f.file_field :category %>

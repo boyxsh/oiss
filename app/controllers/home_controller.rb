@@ -22,4 +22,22 @@ class HomeController < ApplicationController
     @news = News.all
     @show_news = params[:id].blank? ? @news.first :  News.find_by_id(params[:id])
   end
+  def themes
+    @id = params[:id].blank?
+
+   if @id
+      @categories =  Category.all     
+      description = Description.where(:category_id => nil)
+      description.each do |d| 
+        @title = d.title
+        @body = d.body
+      end
+   else
+    @categories = Category.find_by_id(params[:id])
+    @title = @categories.name
+    @body = @categories.description.body
+   end
+
+
+  end
 end
