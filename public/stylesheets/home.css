@@ -137,6 +137,10 @@ text-decoration:none;
 	margin-bottom:10px;
 }
 
+.right_box .news span{
+	font-size:2em;
+}
+
 .contact{
 	-moz-box-shadow: 0 2px 5px #CDCDCD;
     background: none repeat scroll 0 0 #FFFFFF;
@@ -145,7 +149,7 @@ text-decoration:none;
     font-size: 90%;
     height: 15px;
     line-height: 15px;
-    margin: 10px;
+    margin: 10px 0px 10px 10px;
     padding: 8px;
     text-align: center;
     width: 934px;
@@ -199,6 +203,50 @@ div .mid{
 .widget .bg_next {
   background-position: -390px -160px;
 	margin-left:10px;
+}
+
+/*news page*/
+.news_details{
+	color:#FFF;
+	margin:30px auto 0;
+	width: 400px;
+	height:500px;
+/*	border: 1px solid;*/
+}
+
+.news_details .date{
+	float:right;
+}
+
+/*.news_details .content{
+	margin-top: 20px;
+}*/
+
+fieldset {
+ 	border: 1px solid #FF44AA;
+  margin-top: 5px;
+  padding: 10px;
+}
+
+fieldset legend {
+/*color:#1E7ACE;*/
+font-weight:bold;
+padding:3px 20px 3px 20px;
+/*border:1px solid #1E7ACE;*/
+/*background:#fff;*/
+}
+
+fieldset label {
+float:right;
+width:120px;
+text-align:right;
+padding:2px;
+margin:1px;
+}
+
+fieldset div {
+clear:left;
+margin:30px 0 2px 0;
 }
 .clear{
 	clear:both;

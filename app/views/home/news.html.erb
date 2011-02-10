@@ -1,27 +1,17 @@
 <!--inclue header partial-->
 <%= render :partial => "header" %>
 
-<div id="content" class="container_12">
-  <div class="home_news grid_9">
-            <p id=”title” class=”grid_6″>
-              <%= @show_news.title %>
-            </p>
-            <p id=”update” class=”grid_6″>
-            <%= @show_news.updated_at.strftime("%Y-%m-%d %H:%M:%S") %>
-            </p>
-            <p id=”content” class=”grid_2″>
-              <%= @show_news.content %>
-            </p>
-  </div>
-  <div class="news_lists grid_3">
-	<% @news.each do |news| %>
-          <li> <%= link_to news.title, home_news_show_path(news) %>
-	<% end %>
-    </div>
+<div id="content" class="news_details">
+	<fieldset>
+	<legend><span><%= @show_news.title %></span></legend>
+	<label><%= @show_news.updated_at.strftime("%Y-%m-%d %H:%M:%S") %></label>
+<div class="content">
+<p><%= @show_news.content %></p>
+</fieldset>
 </div>
 <div class="clear"></div>
 
-<div id="footer" class="container_12">
+<!-- <div id="footer" class="container_12">
   footer
 <%= link_to 'Admin', admin_index_path %> 
-</div>
+</div> -->
