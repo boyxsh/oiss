@@ -12,31 +12,50 @@
 						visible: 1
 				});
     });
-		$(function(){
-		  // $("div.topPic").carousel({ autoSlide: true, autoSlideInterval: 3000, delayAutoSlide: 2000});
-			// $("div.pictures").carousel({ dispItems: 3,autoSlide: true, autoSlideInterval: 3000, delayAutoSlide: 2000});
-		});
 </script>
 <%= render :partial => "header" %>
+<style type="text/css">
+.raised{background:transparent;margin-bottom:10px;}
+.raised h1,.raised p{margin:0 10px;}
+.raised h1{font-size:2em;color:#fff;}
+.raised p{padding-bottom:0.5em;}
+.raised .b1,.raised .b2,.raised .b3,.raised .b4,.raised .b1b,.raised .b2b,.raised .b3b,.raised .b4b{display:block;overflow:hidden;font-size:1px;}
+.raised .b1,.raised .b2,.raised .b3,.raised .b1b,.raised .b2b,.raised .b3b{height:1px;}
+.raised .b2{background:#FFF;border-left:1px solid #FFF;border-right:1px solid #FFF;}
+.raised .b3{background:#FFF;border-left:1px solid #FFF;border-right:1px solid #FFF;}
+.raised .b4{background:#FFF;border-left:1px solid #FFF;border-right:1px solid #FFF;}
+.raised .b4b{background:#FFF;border-left:1px solid #FFF;border-right:1px solid #FFF;}
+.raised .b3b{background:#FFF;border-left:1px solid #FFF;border-right:1px solid #FFF;}
+.raised .b2b{background:#FFF;border-left:1px solid #FFF;border-right:1px solid #FFF;}
+.raised .b1{margin:0 5px;background:#FFF;}
+.raised .b2, .raised .b2b{margin:0 3px;border-width:0 2px;}
+.raised .b3, .raised .b3b{margin:0 2px;}
+.raised .b4, .raised .b4b{height:2px; margin:0 1px;}
+.raised .b1b{margin:0 5px; background:#FFF;}
+.raised .boxcontent{display:block;background:#FFF;border-left:1px solid #FFF;border-right:1px solid #FFF;}
+</style>
+
 <div class="clear"></div>
 <div class="content">
 	<div class="topPic">
 		<div class='pic'>
 		<ul>
-			<li><img height="400px" width="940px" src="/images/src/header.jpg" /></li>
-			<li><img height="400px" width="940px" src="<%=  @picture.attachment.url(false,false) %>" /></li>			
-			<li><img height="400px" width="940px" src="/images/src/header.jpg" /></li>
-			<li><img height="400px" width="940px" src="<%=  @picture.attachment.url(false,false) %>" /></li>
+			<% @pictures.each do |picture|%>
+				<li><img height="400px" width="940px" src="<%=picture.attachment.url(false,false) %>"/></li>	
+			<% end%>
 		</ul>
 		</div>
 	</div>
 	<div class="movie">
 		<!-- vertical: true -->
-		<a class="media {width:360, height:360, type:'swf', autoplay:true}" href="http://player.youku.com/player.php/sid/XMjM1NzUxOTM2/v.swf"></a>
+		<a class="media {width:350, height:350, type:'swf', autoplay:true}" href="http://player.youku.com/player.php/sid/XMjM1NzUxOTM2/v.swf"></a>
 		<!-- <a class="media {width:360, height:360}" href="<%=@video.attachment.url(false,false)%>"></a> -->
 	</div>
 	<div class="right_box">
-		<div class="news">
+		<div class="news raised">
+			<b class="b1"></b><b class="b2"></b><b class="b3"></b><b class="b4"></b>
+			<div class="boxcontent">
+			
 			<marquee scrollAmount=2 onmouseover=stop() onmouseout=start() direction=up height=160>
 	    <ul>
 	      <% for new in @news%>
@@ -44,12 +63,15 @@
 	      <% end %>
 	    </ul>
 	    </marquee>
+	
+			</div>
+			<b class="b4b"></b><b class="b3b"></b><b class="b2b"></b><b class="b1b"></b>
 		</div>
 		<div class="pictures">
 			<div class="carousel">
 				<ul>
 				<% @categories.each do |category| %>
-					<li><a href='home/pictures'><img height="150px" width="185px" src="<%=category.category.url(false,false)%>" alt="<%=category.name%>"></a></li>
+					<li><a href='/home/pictures/<%=category.id%>'><img height="175px" width="185px" src="<%=category.category.url(false,false)%>" alt="<%=category.name%>"></a></li>
 				<% end %>
 				</ul>
 			</div>

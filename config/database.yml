@@ -4,6 +4,15 @@
 #   gem install mysql2
 #
 # And be sure to use new-style password hashing:
+boblocal:
+  adapter: mysql2
+  encoding: utf8
+  reconnect: false
+  database: oiss_local
+  pool: 5
+  username: root
+  password:
+  host: localhost
 shelllocal:
   adapter: mysql2
   encoding: utf8
