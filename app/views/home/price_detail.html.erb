@@ -1,0 +1,15 @@
+<!--inclue header partial-->
+<%= render :partial => "header" %>
+
+<div id="content" class="price_details">
+	<fieldset>
+	<legend><span><%= @price.name %>报价</span></legend>
+<p><%=image_tag @price.rate.url(false, false), {:width => '960px', :height => '600px'}%></p>
+</fieldset>
+</div>
+<div class="clear"></div>
+
+<!-- <div id="footer" class="container_12">
+  footer
+<%= link_to 'Admin', admin_index_path %> 
+</div> -->

@@ -1,0 +1,15 @@
+<!--inclue header partial-->
+<%= render :partial => "header" %>
+<div id='price'>
+<% @prices.each do |price| %>
+	<div class='item'>
+		<a href='/home/price_detail/<%=price.id%>'><img height="200px" width="200px" src="<%=price.icon.url(false,false)%>" alt="<%=price.name%>"><br/>
+		<div><span><%=price.name%></span></div>
+		</a>
+	</div>
+<% end %>
+</div>
+<!-- <div id="footer" class="container_12">
+  footer
+<%= link_to 'Admin', admin_index_path %> 
+</div> -->

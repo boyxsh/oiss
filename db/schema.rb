@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110208121054) do
+ActiveRecord::Schema.define(:version => 20110211153755) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -62,8 +62,23 @@ ActiveRecord::Schema.define(:version => 20110208121054) do
     t.string   "attachment_content_type"
     t.integer  "attachment_file_size"
     t.datetime "attachment_updated_at"
-    t.string   "category_id"
+    t.integer  "category_id"
     t.boolean  "show_in_top"
+  end
+
+  create_table "prices", :force => true do |t|
+    t.string   "name"
+    t.float    "rate"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "icon_file_name"
+    t.string   "icon_content_type"
+    t.integer  "icon_file_size"
+    t.datetime "icon_updated_at"
+    t.string   "rate_file_name"
+    t.string   "rate_content_type"
+    t.integer  "rate_file_size"
+    t.datetime "rate_updated_at"
   end
 
   create_table "videos", :force => true do |t|

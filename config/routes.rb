@@ -1,5 +1,7 @@
 Oiss::Application.routes.draw do
 
+  resources :prices
+
   resources :categories 
 
   resources :videos
@@ -20,7 +22,12 @@ Oiss::Application.routes.draw do
   get "home/themes"
   get "home/pictures"
 
+  match "home/pictures" => "home#pictures"
   match "home/pictures/:id" => "home#pictures"
+  match "home/company_introductions" => "home#company_introductions"
+  match "home/company_introductions/:id" => "home#company_introductions"
+  match "home/prices" => "home#prices"
+  match "home/price_detail/:id" => "home#price_detail"
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

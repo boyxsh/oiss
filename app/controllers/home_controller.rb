@@ -9,8 +9,9 @@ class HomeController < ApplicationController
   
   def pictures
     if params[:id].blank?
-      @pictures = nil
-       @category_id = nil
+      tmp = Category.find(:first)
+      @pictures = tmp.pictures
+      @category_id = tmp.id
     else
       @pictures = Category.find_by_id(params[:id]).pictures
       @category_id = params[:id]
@@ -22,6 +23,7 @@ class HomeController < ApplicationController
     @news = News.all
     @show_news = params[:id].blank? ? @news.first :  News.find_by_id(params[:id])
   end
+  
   def themes
     @id = params[:id].blank?
 
@@ -39,5 +41,19 @@ class HomeController < ApplicationController
    end
 
 
+  end
+  
+  def company_introductions
+    @company_introduction = params[:id].blank? ? CompanyIntroduction.find(:first) :  CompanyIntroduction.find_by_id(params[:id])
+  end
+  
+  def prices
+    @prices = Price.all
+  end
+
+  def price_detail
+    unless params[:id].blank?
+      @price = Price.find_by_id(params[:id])
+    end
   end
 end
