@@ -2,6 +2,8 @@ Oiss::Application.routes.draw do
 
   resources :prices
 
+  resources :groups
+
   resources :categories 
 
   resources :videos
@@ -20,6 +22,7 @@ Oiss::Application.routes.draw do
   get "home/index"
   get "home/news"
   get "home/themes"
+  get "home/groups"
   get "home/pictures"
 
   match "home/pictures" => "home#pictures"

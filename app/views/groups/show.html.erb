@@ -1,0 +1,12 @@
+<p id="notice"><%= notice %></p>
+
+<%= image_tag @group.avatar.url %>
+
+<p>
+  <b>Description:</b>
+  <%= @group.description %>
+</p>
+
+
+<%= link_to 'Edit', edit_group_path(@group) %> |
+<%= link_to 'Back', groups_path %>

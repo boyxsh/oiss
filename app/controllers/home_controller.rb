@@ -39,8 +39,10 @@ class HomeController < ApplicationController
     @title = @categories.name
     @body = @categories.description.body
    end
+  end
 
-
+  def groups
+      @group = Group.find(:last)
   end
   
   def company_introductions

@@ -1,0 +1,18 @@
+<!--inclue header partial-->
+<%= render :partial => "header" %>
+
+<div id="content" class="container_12">
+		<div class="groups_pic">
+                  <%= image_tag @group.avatar.url %>
+		</div>
+                <div class="groups_description">
+                    <%= @group.description %>
+                </div>
+</div>
+
+<div class="clear"></div>
+
+<div id="footer" class="container_12">
+  footer
+<%= link_to 'Admin', admin_index_path %> 
+</div>
