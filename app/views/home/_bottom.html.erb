@@ -1,11 +1,12 @@
 	<div class="clear"></div>
 	<div class="contact">
 		地址:&nbsp;<%= @contact.address %>&nbsp;|&nbsp;
-		电话:&nbsp;<%= @contact.phone %>&nbsp;|&nbsp;
+		Email:&nbsp;<%= @contact.email %>&nbsp;|&nbsp;
+		手机:&nbsp;<%= @contact.phone %>&nbsp;|&nbsp;
+		电话:&nbsp;<%= @contact.telephone %>&nbsp;|&nbsp;
 	  QQ:&nbsp;
 		<% for qq in @contact.qq.split(" ") %>
-		<%=qq%>
-			<!-- <a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<%=qq%>&site=qq&menu=yes"><img border="0" src="http://wpa.qq.com/pa?p=2:<%=qq%>:45" alt="点击这里给我发消息" title="点击这里给我发消息"></a> -->
-		<% end %>&nbsp;|&nbsp;
-		MSN: <%= @contact.msn %>
+			<a target="_blank" href="http://wpa.qq.com/msgrd?v=3&uin=<%=qq%>&site=qq&menu=yes"><%=qq%></a>
+		<% end %>&nbsp;
 	</div>
+<!-- <img border="0" src="http://wpa.qq.com/pa?p=2:<%=qq%>:45" alt="点击这里给我发消息" title="点击这里给我发消息"> -->

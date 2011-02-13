@@ -2,10 +2,10 @@
     $(function() {
         // this one liner handles all the examples on this page
         $('a.media').media();
-				$(".carousel").jCarouselLite({
-				    auto: 800,
-				    speed: 1000,
-				});
+				// $(".carousel").jCarouselLite({
+				//     auto: 800,
+				//     speed: 1000,
+				// });
 				$(".pic").jCarouselLite({
 				    auto: 4000,
 				    speed: 3000,
@@ -71,7 +71,7 @@
 			<div class="carousel">
 				<ul>
 				<% @categories.each do |category| %>
-					<li><a href='/home/pictures/<%=category.id%>'><img height="173px" width="187px" src="<%=category.category.url(false,false)%>" alt="<%=category.name%>"></a></li>
+					<li><a href='/home/pictures/<%=category.id%>'><img height="173px" width="137px" src="<%=category.category.url(false,false)%>" alt="<%=category.name%>"></a></li>
 				<% end %>
 				</ul>
 			</div>

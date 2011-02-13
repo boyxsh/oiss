@@ -1,12 +1,17 @@
 <!--inclue header partial-->
 <%= render :partial => "header" %>
 <div id='price'>
+<% style_color = ['#3FF', '#FA3', '#C0C', '#7A0099', '#FB0']%>
+<% i = 0%>
 <% @prices.each do |price| %>
 	<div class='item'>
-		<a href='/home/price_detail/<%=price.id%>'><img height="200px" width="200px" src="<%=price.icon.url(false,false)%>" alt="<%=price.name%>"><br/>
-		<div><span><%=price.name%></span></div>
+		<a href='/home/price_detail/<%=price.id%>'><img height="100px" width="100px" src="<%=price.icon.url(false,false)%>" alt="<%=price.name%>">
+		<span style='color:<%=style_color[i]%>'><%=price.name%></span>
+		<span style='color:<%=style_color[i]%>'><%=price.val%></span>
 		</a>
 	</div>
+	<div class="clear"></div>
+<%i = i+1%>
 <% end %>
 </div>
-        <%= render :partial => "bottom" ,:object => @contact%>
+<%= render :partial => "bottom" ,:object => @contact%>
