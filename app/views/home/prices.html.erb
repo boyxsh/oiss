@@ -6,8 +6,8 @@
 <% @prices.each do |price| %>
 	<div class='item'>
 		<a href='/home/price_detail/<%=price.id%>'><img height="100px" width="100px" src="<%=price.icon.url(false,false)%>" alt="<%=price.name%>">
-		<span style='color:<%=style_color[i]%>'><%=price.name%></span>
-		<span style='color:<%=style_color[i]%>'><%=price.val%></span>
+		<span style='color:<%=style_color[i] unless style_color[i].blank?%>'><%=price.name%></span>
+		<span style='color:<%=style_color[i] unless style_color[i].blank?%>'><%=price.val%></span>
 		</a>
 	</div>
 	<div class="clear"></div>
