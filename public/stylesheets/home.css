@@ -1,4 +1,3 @@
-
 @charset "UTF-8";
 body {
     font-family: '宋体', Helvetica, "Lucida Grande", Verdana, Geneva, sans-serif;
@@ -272,6 +271,16 @@ margin:30px 0 2px 0;
 div.themes{
   color:#ffffff;
 }
+div.show_image {
+  width: 100%;
+  height: 100%;
+   position: absolute;
+   z-index: -1;
+}
+div.show_image img{
+  width: 960px;
+  height: 580px;
+}
 
 div.themes_context{
   height: 580px;
@@ -288,7 +297,7 @@ div.white-bgc{
   height: 100%;
   letter-spacing: 0.2em;
   line-height: 170%; 
-	z-index: 20;
+  z-index: 9001;
 }
 
 div.carousel{
@@ -327,4 +336,5 @@ div#price .item span{
 }
 div#price .detail{
  	float: left;
+}
 }

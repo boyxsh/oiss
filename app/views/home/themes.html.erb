@@ -3,7 +3,12 @@
 
 <div id="content" class="container_12">
 		<div class="themes">
-                  <div class="themes_context" style= <%="background:url(#{@categories.category.url})no-repeat" unless @id %>> 
+                  <div class="themes_context"> 
+                    <% unless @id %>
+                    <div class="show_image">
+                    <img alt="" src=<%=@categories.category.url %>>
+                  </div>
+                    <% end %>
                     <div class="white-bgc">
                         <div class="grid_1"> <%= simple_format "" %> </div>
                         <div class="grid_10">
