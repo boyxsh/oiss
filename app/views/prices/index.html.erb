@@ -22,4 +22,9 @@
 
 <br />
 
-<%= link_to 'New Price', new_price_path %>
+<% if admin? %>
+<div class="grid_12">
+<%= link_to 'New Price', new_price_path %> |
+<%= render :partial => "admin/goto_admin" %>
+</div>
+<% end %>

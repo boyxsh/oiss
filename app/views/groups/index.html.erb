@@ -20,4 +20,9 @@
 
 <br />
 
-<%= link_to 'New Group', new_group_path %>
+<% if admin? %>
+<div class="grid_12">
+<%= link_to 'New Group', new_group_path %> |
+<%= render :partial => "admin/goto_admin" %>
+</div>
+<% end %>

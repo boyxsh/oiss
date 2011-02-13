@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(:version => 20110211154455) do
     t.string   "attachment_content_type"
     t.integer  "attachment_file_size"
     t.datetime "attachment_updated_at"
-    t.integer  "category_id"
+    t.string   "category_id"
     t.boolean  "show_in_top"
   end
 
