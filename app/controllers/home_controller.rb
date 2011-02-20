@@ -4,7 +4,7 @@ class HomeController < ApplicationController
   end
 
   def index
-    @pictures = Picture.find(:all, :conditions => {:show_in_top => 1})
+    @pictures = Picture.find(:all, :conditions => {:show_in_top => true})
     @news = News.all
     @video = Video.find(:first, :order=>"updated_at asc")
     @categories = Category.all
