@@ -3,9 +3,11 @@
 
 <div id="content" class="company_introduction_details">
 	<fieldset>
+           <% unless @company_introduction.blank? %>
 	<legend><span>公司简介</span></legend>
 <div class="content">
 <p><%= @company_introduction.content %></p>
+          <% end %>
 </fieldset>
 </div>
 <div class="clear"></div>

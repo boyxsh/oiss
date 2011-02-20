@@ -47,9 +47,11 @@
 		</div>
 	</div>
 	<div class="movie">
+                <% unless @video.blank? %>
 		<!-- vertical: true -->
 		<a class="media {width:350, height:350, type:'swf', autoplay:true}" href="http://player.youku.com/player.php/sid/XMjM1NzUxOTM2/v.swf"></a>
 		<!-- <a class="media {width:360, height:360}" href="<%=@video.attachment.url(false,false)%>"></a> -->
+              <% end %>
 	</div>
 	<div class="right_box">
 		<div class="news raised">
