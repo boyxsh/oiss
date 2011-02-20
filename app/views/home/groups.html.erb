@@ -2,12 +2,14 @@
 <%= render :partial => "header" %>
 
 <div id="content" class="container_12">
+  <% unless @group.blank? %>
 		<div class="groups_pic">
                   <%= image_tag @group.avatar.url %>
 		</div>
                 <div class="groups_description">
                     <%= @group.description %>
                 </div>
+              <% end %>
 </div>
 
 <div class="clear"></div>
