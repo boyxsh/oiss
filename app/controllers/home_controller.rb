@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def get_last_active_contact
-    @contact = Contact.find(:last, :conditions =>{:active=>1})
+    @contact = Contact.find(:last, :conditions =>{:active=>true})
   end
 
   def index
