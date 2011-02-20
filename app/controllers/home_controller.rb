@@ -50,7 +50,7 @@ class HomeController < ApplicationController
   end
 
   def groups
-    get_last_active_contact
+    #get_last_active_contact
       @group = Group.find(:last)
   end
   
