@@ -1,4 +1,4 @@
 production:
   bucket: wy_wedding
-  access_key_id: AKIAJN5C46AGCR4TOQDA
-  secret_access_key: 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
+  access_key_id: aaa
+  secret_access_key: bbb
