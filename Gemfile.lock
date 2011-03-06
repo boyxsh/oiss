@@ -72,6 +72,7 @@ GEM
       rake (>= 0.8.7)
       thor (~> 0.14.4)
     rake (0.8.7)
+    rmagick (2.13.1)
     thor (0.14.4)
     treetop (1.4.9)
       polyglot (>= 0.3.1)
@@ -86,3 +87,4 @@ DEPENDENCIES
   mysql2
   paperclip!
   rails (= 3.0.3)
+  rmagick
