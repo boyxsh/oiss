@@ -1,7 +1,7 @@
 development:
   bucket: wyedding
   access_key_id: AKIAJN5C46AGCR4TOQDA
-  secret_access_key: AKIAJN5C46AGCR4TOQDA
+  secret_access_key: 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
 
 test:
   bucket: wyedding
@@ -11,4 +11,4 @@ test:
 production:
   bucket: wyedding
   access_key_id: AKIAJN5C46AGCR4TOQDA
-  secret_access_key: AKIAJN5C46AGCR4TOQDA
+  secret_access_key: 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
