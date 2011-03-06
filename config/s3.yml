@@ -1,4 +1,19 @@
+boblocal:
+  bucket: wy_wedding
+  access_key_id: AKIAJN5C46AGCR4TOQDA
+  secret_access_key: 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
+
+development:
+  bucket: wy_wedding
+  access_key_id: AKIAJN5C46AGCR4TOQDA
+  secret_access_key: JwtmvQ1nQWxBUQAaVgVbxrmnaCIu4RwevoOUTie9
+
+test:
+  bucket: wyedding
+  # access_key_id: AKIAJN5C46AGCR4TOQDA
+  # secret_access_key: <your key>
+
 production:
   bucket: wy_wedding
-  access_key_id: aaa
-  secret_access_key: bbb
+  access_key_id: AKIAJN5C46AGCR4TOQDA
+  secret_access_key: JwtmvQ1nQWxBUQAaVgVbxrmnaCIu4RwevoOUTie9
