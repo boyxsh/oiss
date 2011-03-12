@@ -5,6 +5,7 @@ class Picture < ActiveRecord::Base
     :medium => "960x400>",
   },
     :storage => :s3,
+    :bucket => ENV['S3_BUCKET'],
     :s3_credentials => "#{RAILS_ROOT}/config/s3.yml",
     :path => "/:style/:id/:filename"
   
